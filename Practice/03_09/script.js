@@ -16,6 +16,7 @@ const backpack = {
     left: 26,
     right: 26,
   },
+  dirty: true,
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -23,4 +24,13 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  toggleDirt: function (dirtStatus) {
+    this.dirty = dirtStatus;
+  },
 };
+
+console.log("Is the backpack dirty?", backpack.dirty);
+
+backpack.toggleDirt(false);
+
+console.log("Is the backpack dirty after cleaning?", backpack.dirty);
